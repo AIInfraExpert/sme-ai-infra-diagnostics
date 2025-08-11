@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Infrastructure Checklist",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["item", "status"],
+    "properties": {
+      "item": { "type": "string", "minLength": 1 },
+      "status": { "type": "string", "enum": ["required", "recommended", "optional"] }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nadis.ai/schemas/diagnostic.schema.json",
+  "title": "Nadis Diagnostic",
+  "type": "object",
+  "required": ["organization", "assessment_date", "department", "owner", "tools", "signals", "review_cadence", "audit"],
+  "properties": {
+    "organization": { "type": "string" },
+    "assessment_date": { "type": "string", "format": "date" },
+    "department": { "type": "string" },
+    "owner": {
+      "type": "object",
+      "required": ["name", "role"],
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["tool_name", "category", "monthly_cost_usd", "team_users", "primary_use", "signal_type", "input_source"],
+        "properties": {
+          "tool_name": { "type": "string" },
+          "category": { "type": "string" },
+          "monthly_cost_usd": { "type": "number" },
+          "team_users": { "type": "integer", "minimum": 0 },
+          "primary_use": { "type": "string" },
+          "signal_type": { "type": "string", "enum": ["efficiency", "throughput", "growth", "quality", "risk"] },
+          "input_source": { "type": "string", "enum": ["manual", "system"] }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "signals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["signal_name", "description", "frequency", "owner", "metrics"],
+        "properties": {
+          "signal_name": { "type": "string" },
+          "description": { "type": "string" },
+          "frequency": { "type": "string", "enum": ["daily", "weekly", "biweekly", "monthly", "quarterly"] },
+          "owner": { "type": "string" },
+          "metrics": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["metric_name", "label", "metric_type", "unit", "period_value"],
+              "properties": {
+                "metric_name": { "type": "string" },
+                "label": { "type": "string" },
+                "metric_type": { "type": "string", "enum": ["quantitative", "percentage", "qualitative"] },
+                "unit": { "type": "string" },
+                "period_value": { "type": "number" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "last_snapshot_notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "roi": {
+      "type": "object",
+      "properties": {
+        "estimated_hourly_cost_usd": { "type": "number" },
+        "weekly_value_created_usd": { "type": "number" },
+        "est_monthly_value_created_usd": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+
+    "gaps": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "owner", "due", "status"],
+        "properties": {
+          "item": { "type": "string" },
+          "owner": { "type": "string" },
+          "due": { "type": "string", "format": "date" },
+          "status": { "type": "string", "enum": ["planned", "in_progress", "done"] }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "review_cadence": {
+      "type": "object",
+      "required": ["operational", "strategic"],
+      "properties": {
+        "operational": { "type": "string", "enum": ["daily", "weekly", "biweekly", "monthly", "quarterly"] },
+        "strategic": { "type": "string", "enum": ["monthly", "quarterly", "semiannual"] }
+      },
+      "additionalProperties": false
+    },
+
+    "audit": {
+      "type": "object",
+      "required": ["created_by", "schema_version"],
+      "properties": {
+        "created_by": { "type": "string" },
+        "schema_version": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

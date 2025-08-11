@@ -1,0 +1,19 @@
+{
+  "name": "validation",
+  "version": "1.0.0",
+  "main": "index.js",
+  
+  "scripts": {
+   "validate:diagnostics": "ajv -c ajv-formats -s ../../templates/diagnostic.schema.json -d '../../templates/sample-diagnostic*.json' --strict=false",
+    "validate:checklist": "ajv -s ./checklist.schema.json -d ../../templates/infrastructure-checklist.json --strict=false",
+    "validate:all": "npm run validate:diagnostics && npm run validate:checklist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^3.0.1"
+  }
+}

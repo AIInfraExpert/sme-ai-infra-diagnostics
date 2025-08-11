@@ -1,0 +1,75 @@
+{
+  "tool_info": {
+    "tool_name": "Notion AI",
+    "monthly_cost": 60,
+    "team_users": 5,
+    "signal_type": "efficiency",
+    "input_source": "manual",
+    "notes": "Weekly summary of hours saved in content ops."
+  },
+  "signal_details": {
+    "signal_name": "Content Ops Efficiency",
+    "signal_description": "Track the efficiency of content operations through Notion AI's weekly summaries.",
+    "signal_owner": "Content Operations Team",
+    "data_source": "Notion AI",
+    "frequency": "weekly",
+    "metrics": [
+      {
+        "metric_name": "Hours Saved",
+        "metric_type": "quantitative",
+        "unit": "hours"
+      }
+    ],
+    "action_items": [
+      {
+        "item": "Review weekly summaries with the team",
+        "status": "required"
+      },
+      {
+        "item": "Adjust content strategies based on insights",
+        "status": "recommended"
+      }
+    ]
+  },
+  "signal_input_schema": {
+    "input_fields": [
+      {
+        "field_name": "Tool Name",
+        "field_type": "string",
+        "required": true
+      },
+      {
+        "field_name": "Monthly Cost",
+        "field_type": "number",
+        "required": true
+      },
+      {
+        "field_name": "Team Users",
+        "field_type": "number",
+        "required": true
+      },
+      {
+        "field_name": "Signal Type",
+        "field_type": "string",
+        "required": true
+      },
+      {
+        "field_name": "Input Source",
+        "field_type": "string",
+        "required": true
+      },
+      {
+        "field_name": "Notes",
+        "field_type": "string",
+        "required": false
+      }
+    ]
+  },
+  "infrastructure_checklist": [
+    { "item": "Centralized data access for team", "status": "required" },
+    { "item": "Documented AI tools + purpose", "status": "recommended" },
+    { "item": "ROI tracker for software spend", "status": "required" },
+    { "item": "Owner for Cognitive / Operational / Strategic systems", "status": "required" },
+    { "item": "Monthly signal review ritual", "status": "recommended" }
+  ]
+}

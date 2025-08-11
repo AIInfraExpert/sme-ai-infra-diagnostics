@@ -1,0 +1,22 @@
+name: Validate templates
+
+on:
+  push:
+    paths:
+      - "templates/**.json"
+      - "tools/validation/**"
+  pull_request:
+
+jobs:
+  ajv-validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/validation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run validate:all

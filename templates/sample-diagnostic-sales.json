@@ -1,0 +1,108 @@
+{
+  "organization": "Example Co.",
+  "assessment_date": "2025-08-08",
+  "department": "Sales Operations",
+  "owner": {
+    "name": "Morgan Patel",
+    "role": "Revenue Operations Lead"
+  },
+
+  "tools": [
+    {
+      "tool_name": "HubSpot",
+      "category": "crm",
+      "monthly_cost_usd": 1200,
+      "team_users": 18,
+      "primary_use": "Pipeline management, automation, reporting",
+      "signal_type": "throughput",
+      "input_source": "system"
+    },
+    {
+      "tool_name": "Apollo",
+      "category": "prospecting",
+      "monthly_cost_usd": 600,
+      "team_users": 10,
+      "primary_use": "Lead discovery and sequencing",
+      "signal_type": "growth",
+      "input_source": "system"
+    },
+    {
+      "tool_name": "Perplexity",
+      "category": "research",
+      "monthly_cost_usd": 80,
+      "team_users": 6,
+      "primary_use": "Account research, objection handling briefs",
+      "signal_type": "efficiency",
+      "input_source": "manual"
+    }
+  ],
+
+  "signals": [
+    {
+      "signal_name": "Lead Gen Velocity",
+      "description": "Weekly net-new ICP leads sourced per SDR from Apollo sequences.",
+      "frequency": "weekly",
+      "owner": "SDR Manager",
+      "metrics": [
+        {
+          "metric_name": "net_new_icp_leads",
+          "label": "Net-New ICP Leads / SDR / Week",
+          "metric_type": "quantitative",
+          "unit": "leads",
+          "period_value": 34
+        },
+        {
+          "metric_name": "sequence_reply_rate",
+          "label": "Sequence Reply Rate",
+          "metric_type": "percentage",
+          "unit": "%",
+          "period_value": 8.7
+        }
+      ],
+      "last_snapshot_notes": "Reply rate improved after new 3-step opener; need variant test for enterprise vertical."
+    },
+    {
+      "signal_name": "Pipeline Hygiene",
+      "description": "Aged opps >45 days without activity; measured from HubSpot.",
+      "frequency": "weekly",
+      "owner": "RevOps",
+      "metrics": [
+        {
+          "metric_name": "stale_opps",
+          "label": "Stale Opportunities (>45d)",
+          "metric_type": "quantitative",
+          "unit": "opps",
+          "period_value": 17
+        }
+      ],
+      "last_snapshot_notes": "Introduce auto-tasks + dashboard nudge for AMs each Friday."
+    }
+  ],
+
+  "roi": {
+    "estimated_hourly_cost_usd": 65,
+    "weekly_value_created_usd": 2210,
+    "est_monthly_value_created_usd": 8840
+  },
+
+  "gaps": [
+    "No unified ICP tagging across CRM and outbound lists",
+    "Limited A/B testing discipline on sequence steps"
+  ],
+
+  "next_actions": [
+    { "item": "Define ICP field + values and sync to Apollo", "owner": "RevOps", "due": "2025-08-22", "status": "planned" },
+    { "item": "Set weekly sequence A/B experiment cadence", "owner": "SDR Manager", "due": "2025-08-29", "status": "planned" },
+    { "item": "Auto-close stale opps after 60d inactivity", "owner": "AM Lead", "due": "2025-09-05", "status": "planned" }
+  ],
+
+  "review_cadence": {
+    "operational": "weekly",
+    "strategic": "monthly"
+  },
+
+  "audit": {
+    "created_by": "Nadis Intelligence",
+    "schema_version": "1.0.0"
+  }
+}

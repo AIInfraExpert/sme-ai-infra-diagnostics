@@ -1,0 +1,73 @@
+{
+  "organization": "Example Co.",
+  "assessment_date": "2025-08-08",
+  "department": "Content Operations",
+  "owner": {
+    "name": "Jordan Lee",
+    "role": "Head of Content"
+  },
+
+  "tools": [
+    {
+      "tool_name": "Notion AI",
+      "category": "authoring_assist",
+      "monthly_cost_usd": 60,
+      "team_users": 5,
+      "primary_use": "Drafting, summarization, content briefs",
+      "signal_type": "efficiency",
+      "input_source": "manual"
+    }
+  ],
+
+  "signals": [
+    {
+      "signal_name": "Content Ops Efficiency",
+      "description": "Weekly time saved using AI-assisted drafting and templated briefs.",
+      "frequency": "weekly",
+      "owner": "Content Operations Team",
+      "metrics": [
+        {
+          "metric_name": "hours_saved",
+          "label": "Hours Saved",
+          "metric_type": "quantitative",
+          "unit": "hours",
+          "period_value": 18
+        },
+        {
+          "metric_name": "adoption_rate",
+          "label": "Tool Adoption Rate",
+          "metric_type": "percentage",
+          "unit": "%",
+          "period_value": 76
+        }
+      ],
+      "last_snapshot_notes": "Writers report faster outline creation; need training for advanced prompts."
+    }
+  ],
+
+  "roi": {
+    "estimated_hourly_cost_usd": 55,
+    "weekly_value_created_usd": 990,
+    "est_monthly_value_created_usd": 3960
+  },
+
+  "gaps": [
+    "Inconsistent tagging of content briefs in Notion",
+    "No baseline pre-AI time benchmarks for long-form articles"
+  ],
+
+  "next_actions": [
+    { "item": "Standardize brief template + tags", "owner": "Content Lead", "due": "2025-08-22", "status": "planned" },
+    { "item": "30-min prompt training for team", "owner": "Ops Enablement", "due": "2025-08-29", "status": "planned" }
+  ],
+
+  "review_cadence": {
+    "operational": "weekly",
+    "strategic": "monthly"
+  },
+
+  "audit": {
+    "created_by": "Nadis Intelligence",
+    "schema_version": "1.0.0"
+  }
+}

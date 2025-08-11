@@ -1,6 +1,6 @@
 # AI Operating Model Canvas
 
-**A strategic blueprint for orchestrating AI adoption in small and midsized enterprises.**
+**A strategic blueprint for orchestrating AI adoption in small and mid-sized enterprises.**
 
 The **AI Operating Model Canvas** is a visual tool designed by **Nadis Intelligence™** to help leadership teams map, align, and evolve their AI infrastructure.  
 It is the central framework used in our consulting, diagnostics, and workshops.

@@ -1,5 +1,11 @@
 # Nadis AI Infrastructure Systems
 
+[**Live Site →**](https://aiwithari.github.io/sme-ai-infrastructure/)
+
+**Quick Links:**  
+[AI Canvas](https://canvas.nadis.ai) · [Pulse](https://pulse.nadis.ai) · [SCALE Factor](https://scalefactor.nadis.ai)
+
+
 **Strategic Infrastructure for Scaling Enterprises**  
 Tools, frameworks, and diagnostics for building intelligent, adaptive organizations in the era of ambient AI.
 
@@ -38,13 +44,15 @@ This public repo highlights the core systems used by **Nadis Intelligence™** t
 
 ## Use Cases
 
-These systems are used in real client work at Nadis Intelligence:
+These systems are applied in real client work at Nadis Intelligence to deliver measurable results:
 
-- **Diagnostics**: Used in SCALE Factor™ assessments to benchmark SME readiness  
-- **Consulting**: Core tools in Nadis executive infrastructure consulting  
-- **Signal Inputs**: Basis for Symbi™ — our async infrastructure monitoring system  
-- **Workshops**: Shared with enterprise teams for AI readiness bootcamps and strategic planning
+- **Symbi™**: Keeps leadership connected to the real-time health of infrastructure with continuous signal tracking, so small issues are caught before they become expensive problems.
 
+- **SCALE Factor™**: Gives executives a clear, data-backed view of where AI and operational systems are coherent — and where they’re holding growth back — in under 10 minutes.
+
+- **Executive Ops**: Aligns decision rights, budget visibility, and tool ROI into one operating rhythm, enabling faster, higher-confidence decisions.
+
+- **Consulting & Workshops**: Embeds these tools directly into leadership operations through advisory engagements, AI readiness bootcamps, and strategic planning sessions.
 ---
 
 ## About Nadis Intelligence™

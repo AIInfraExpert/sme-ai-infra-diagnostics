@@ -1,6 +1,6 @@
 # Nadis AI Infrastructure Systems
 
-[**Live Site →**](https://aiwithari.github.io/sme-ai-infrastructure/)
+[**Go to Live Site**](https://aiwithari.github.io/sme-ai-infrastructure/)
 
 **Quick Links:**  
 [AI Canvas](https://canvas.nadis.ai) · [Pulse](https://pulse.nadis.ai) · [SCALE Factor](https://scalefactor.nadis.ai)
